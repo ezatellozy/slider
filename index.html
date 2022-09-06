@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,6 +17,11 @@
     <script src="js/plugins/revolution.extension.parallax.min.js"></script>
     <script src="js/plugins/revolution.extension.actions.min.js"></script>
     <script src="js/plugins/revolution.extension.layeranimation.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/countTo.js"></script>
+    <script src="js/flexslider.js"></script>
+    <script src="js/cube.portfolio.js"></script>
+    <link rel="stylesheet" href="css/cubeportfolio.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/all.min.css" />
@@ -24,7 +29,7 @@
     <link rel="stylesheet" href="css/navigation.css" />
     <link rel="stylesheet" href="css/settings.css" media="screen" />
   </head>
-  <body>
+  <body dir="ltr">
     <div id="site-header-wrap">
       <div id="top-bar" class="style-2">
         <div id="top-bar-inner" class="container">
@@ -71,10 +76,24 @@
       <header id="site-header" class="header-front-page style-5">
         <div id="site-header-inner" class="container">
           <div class="wrap-inner">
+            <div id="site-logo">
+              <div id="site-logo-inner">
+                <a href="/" title="Rashid" rel="home" class="main-logo">
+                  <img
+                    src="images/logos/img2.png"
+                    alt="Rashid"
+                    data-retina="images/logos/img2.png"
+                    data-width="200"
+                    data-height="30"
+                    class="img-fluid"
+                  />
+                </a>
+              </div>
+            </div>
             <nav id="main-nav" class="main-nav">
               <ul class="menu">
                 <li class="menu-item active">
-                  <a href="home-slider-full-screen.html">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li class="menu-item">
                   <a href="#">Pages</a>
@@ -91,24 +110,7 @@
                 </li>
               </ul>
             </nav>
-            <div id="site-logo">
-              <div id="site-logo-inner">
-                <a
-                  href="home-slider-full-screen.html"
-                  title="Construction"
-                  rel="home"
-                  class="main-logo"
-                >
-                  <img
-                    src="images/logo-light.png"
-                    alt="Construction"
-                    data-retina="assets/img/logo-light@2x.png"
-                    data-width="200"
-                    data-height="30"
-                  />
-                </a>
-              </div>
-            </div>
+
             <div class="mobile-button"><span></span></div>
           </div>
         </div>
@@ -135,12 +137,12 @@
             />
 
             <div
-              class="tp-caption tp-resizeme text-white font-family-heading letter-spacing-1px font-weight-700"
+              class="tp-caption tp-resizeme text-accent-color font-family-heading letter-spacing-1px font-weight-700"
               data-x="['center','center','center','center']"
               data-hoffset="['0','0','0','0']"
               data-y="['middle','middle','middle','middle']"
               data-fontsize="['58','58','58','35']"
-              data-voffset="['-75','-70','-70','-50']"
+              data-voffset="['-30','-70','-70','-50']"
               data-lineheight="['66','65','56','42']"
               data-width="none"
               data-height="none"
@@ -155,38 +157,15 @@
               data-splitout="none"
               data-responsive_offset="on"
             >
-              CONSTRUCTION
+              Rashid Al-Ghamdi's office
             </div>
-            <div
-              class="tp-caption tp-resizeme text-white font-family-heading letter-spacing-1px font-weight-700"
-              data-x="['center','center','center','center']"
-              data-hoffset="['0','0','0','0']"
-              data-y="['middle','middle','middle','middle']"
-              data-voffset="['0','0','0','0']"
-              data-fontsize="['58','58','58','35']"
-              data-lineheight="['66','65','56','42']"
-              data-width="none"
-              data-height="none"
-              data-whitespace="nowrap"
-              data-transform_idle="o:1;"
-              data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
-              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-              data-mask_in="x:0px;y:0px;"
-              data-mask_out="x:inherit;y:inherit;"
-              data-start="1500"
-              data-splitin="none"
-              data-splitout="none"
-              data-responsive_offset="on"
-            >
-              MANAGERS
-              <span class="text-accent-color font-weight-700">SINCE 1981</span>
-            </div>
+
             <div
               class="tp-caption tp-resizeme text-white font-family-extend letter-spacing-4px"
               data-x="['center','center','center','center']"
               data-hoffset="['0','0','0','0']"
               data-y="['middle','middle','middle','middle']"
-              data-voffset="['100','100','100','40']"
+              data-voffset="['80','100','100','40']"
               data-fontsize="['28','26','24','15']"
               data-lineheight="['40','40','40','28']"
               data-width="none"
@@ -203,7 +182,7 @@
               data-responsive_offset="on"
               data-lasttriggerstate="reset"
             >
-              Fast and Reliable Service for Your Project
+              Chartered accountants and auditors
             </div>
           </li>
           <li
@@ -223,13 +202,36 @@
               data-no-retina
             />
             <div
-              class="tp-caption tp-resizeme text-white font-family-extend letter-spacing-7px"
+              class="tp-caption tp-resizeme text-accent-color font-family-heading letter-spacing-1px font-weight-700"
               data-x="['center','center','center','center']"
               data-hoffset="['0','0','0','0']"
               data-y="['middle','middle','middle','middle']"
-              data-voffset="['-50','-50','-50','-50']"
-              data-fontsize="['28','24','20','18']"
-              data-lineheight="['40','36','28','26']"
+              data-fontsize="['58','58','58','35']"
+              data-voffset="['-30','-70','-70','-50']"
+              data-lineheight="['66','65','56','42']"
+              data-width="none"
+              data-height="none"
+              data-whitespace="nowrap"
+              data-transform_idle="o:1;"
+              data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:0px;"
+              data-mask_out="x:inherit;y:inherit;"
+              data-start="1500"
+              data-splitin="none"
+              data-splitout="none"
+              data-responsive_offset="on"
+            >
+              Our services
+            </div>
+            <div
+              class="tp-caption tp-resizeme text-white font-family-extend letter-spacing-4px"
+              data-x="['center','center','center','center']"
+              data-hoffset="['0','0','0','0']"
+              data-y="['middle','middle','middle','middle']"
+              data-voffset="['-30','-20,'-50','-40']"
+              data-fontsize="['28','26','24','15']"
+              data-lineheight="['40','40','40','28']"
               data-width="none"
               data-height="none"
               data-whitespace="nowrap"
@@ -244,16 +246,16 @@
               data-responsive_offset="on"
               data-lasttriggerstate="reset"
             >
-              Welcome to Construction
+              Review of the financial statements.
             </div>
             <div
-              class="tp-caption tp-resizeme text-white font-family-heading letter-spacing-1px font-weight-700"
+              class="tp-caption tp-resizeme text-white font-family-extend letter-spacing-4px"
               data-x="['center','center','center','center']"
               data-hoffset="['0','0','0','0']"
               data-y="['middle','middle','middle','middle']"
-              data-voffset="['26','20','16','10']"
-              data-fontsize="['70','60','50','40']"
-              data-lineheight="['80','70','60','50']"
+              data-voffset="['-25','-30','-40','-40']"
+              data-fontsize="['28','26','24','15']"
+              data-lineheight="['40','40','40','28']"
               data-width="none"
               data-height="none"
               data-whitespace="nowrap"
@@ -266,39 +268,605 @@
               data-splitin="none"
               data-splitout="none"
               data-responsive_offset="on"
+              data-lasttriggerstate="reset"
             >
-              THE
-              <span class="text-accent-color">BEST</span>
-              COMPANY
+              Zakat and taxes service
             </div>
             <div
-              class="tp-caption"
+              class="tp-caption tp-resizeme text-white font-family-extend letter-spacing-4px"
               data-x="['center','center','center','center']"
               data-hoffset="['0','0','0','0']"
               data-y="['middle','middle','middle','middle']"
-              data-voffset="['156','136','116','106']"
+              data-voffset="['80','100','100','40']"
+              data-fontsize="['28','26','24','15']"
+              data-lineheight="['40','40','40','28']"
               data-width="none"
               data-height="none"
               data-whitespace="nowrap"
               data-transform_idle="o:1;"
-              data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-              data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"
-              data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;"
-              data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-              data-start="1250"
+              data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+              data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+              data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+              data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+              data-start="1000"
               data-splitin="none"
               data-splitout="none"
-              data-actions='[{"event":"click","action":"scrollbelow","offset":"20px"}]'
-              data-responsive="on"
+              data-responsive_offset="on"
+              data-lasttriggerstate="reset"
             >
-              <a class="wprt-button big rounded-3px">OUR PORTFOLIO</a>
+              Accounting bookkeeping Accounting services and financial advisory
             </div>
           </li>
         </ul>
         <div class="tp-bannertimer tp-bottom"></div>
       </div>
     </div>
+
+    <section class="promotion">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div style="height: 8px;"></div>
+            <h2
+              class="text-white text-center-mobile font-size-20 margin-bottom-0"
+            >
+              Contractors &amp; Construction Managers Since 1981
+            </h2>
+            <div style="height: 20px;"></div>
+          </div>
+          <div class="col-lg-4">
+            <div class="text-end text-center-mobile">
+              <a href="#" class="wprt-button white rounded-3px">GET A QUOTE</a>
+            </div>
+            <div style="height: 15px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div style="height: 60px;"></div>
+            <h2 class="title">MAIN SERVICES</h2>
+
+            <div style="height: 40px;"></div>
+          </div>
+
+          <div class="col-lg-4">
+            <div
+              class="wprt-icon-box accent-background rounded icon-effect-2 icon-left"
+            >
+              <div class="icon-wrap">
+                <span class="dd-icon icon-drawing"></span>
+              </div>
+              <div class="content-wrap">
+                <h3 class="dd-title font-size-18">
+                  <a href="#">Construction Consultant</a>
+                </h3>
+                <p>
+                  Vestibulum eu libero volutpat, portas quam, tempus sem. Donec
+                  sodales quam id lorem lobortis, vitae interdum nisl.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="wprt-spacer"
+              data-desktop="50"
+              data-mobi="30"
+              data-smobi="30"
+              style="height: 30px;"
+            ></div>
+
+            <div
+              class="wprt-icon-box accent-background rounded icon-effect-2 icon-left"
+            >
+              <div class="icon-wrap">
+                <span class="dd-icon icon-engineer"></span>
+              </div>
+              <div class="content-wrap">
+                <h3 class="dd-title font-size-18">
+                  <a href="#">General Contracting</a>
+                </h3>
+                <p>
+                  Vestibulum eu libero volutpat, portas quam, tempus sem. Donec
+                  sodales quam id lorem lobortis, vitae interdum nisl.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="wprt-spacer"
+              data-desktop="0"
+              data-mobi="30"
+              data-smobi="30"
+              style="height: 30px;"
+            ></div>
+          </div>
+
+          <div class="col-lg-4">
+            <div
+              class="wprt-icon-box accent-background rounded icon-effect-2 icon-left"
+            >
+              <div class="icon-wrap">
+                <span class="dd-icon icon-drawing-compass"></span>
+              </div>
+              <div class="content-wrap">
+                <h3 class="dd-title font-size-18">
+                  <a href="#">Architectural Design</a>
+                </h3>
+                <p>
+                  Vestibulum eu libero volutpat, portas quam, tempus sem. Donec
+                  sodales quam id lorem lobortis, vitae interdum nisl.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="wprt-spacer"
+              data-desktop="50"
+              data-mobi="30"
+              data-smobi="30"
+              style="height: 30px;"
+            ></div>
+
+            <div
+              class="wprt-icon-box accent-background rounded icon-effect-2 icon-left"
+            >
+              <div class="icon-wrap">
+                <span class="dd-icon icon-drill-2"></span>
+              </div>
+              <div class="content-wrap">
+                <h3 class="dd-title font-size-18">
+                  <a href="#">Resconstruction Services</a>
+                </h3>
+                <p>
+                  Vestibulum eu libero volutpat, portas quam, tempus sem. Donec
+                  sodales quam id lorem lobortis, vitae interdum nisl.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="wprt-spacer"
+              data-desktop="0"
+              data-mobi="30"
+              data-smobi="30"
+              style="height: 30px;"
+            ></div>
+          </div>
+
+          <div class="col-lg-4">
+            <div
+              class="wprt-icon-box accent-background rounded icon-effect-2 icon-left"
+            >
+              <div class="icon-wrap">
+                <span class="dd-icon icon-light-bulb"></span>
+              </div>
+              <div class="content-wrap">
+                <h3 class="dd-title font-size-18">
+                  <a href="#">Electrical System</a>
+                </h3>
+                <p>
+                  Vestibulum eu libero volutpat, portas quam, tempus sem. Donec
+                  sodales quam id lorem lobortis, vitae interdum nisl.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="wprt-spacer"
+              data-desktop="50"
+              data-mobi="30"
+              data-smobi="30"
+              style="height: 30px;"
+            ></div>
+
+            <div
+              class="wprt-icon-box accent-background rounded icon-effect-2 icon-left"
+            >
+              <div class="icon-wrap">
+                <span class="dd-icon icon-pipe-11"></span>
+              </div>
+              <div class="content-wrap">
+                <h3 class="dd-title font-size-18">
+                  <a href="#">Plumbilg Services</a>
+                </h3>
+                <p>
+                  Vestibulum eu libero volutpat, portas quam, tempus sem. Donec
+                  sodales quam id lorem lobortis, vitae interdum nisl.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 text-center">
+            <div class="text-right text-center-mobile">
+              <a href="#" class="wprt-button dark rounded-3px">Read More</a>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div style="height: 60px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="wprt-section works parallax"
+      style="background-attachment: fixed; background-position: 50% 22px;"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div
+              class="wprt-spacer"
+              data-desktop="70"
+              data-mobi="60"
+              data-smobi="60"
+              style="height: 70px;"
+            ></div>
+            <h2 class="text-left text-white">FEATURED WORK</h2>
+            <div class="wprt-lines custom-2">
+              <div class="line-1"></div>
+            </div>
+            <div
+              class="wprt-spacer"
+              data-desktop="50"
+              data-mobi="40"
+              data-smobi="40"
+              style="height: 50px;"
+            ></div>
+          </div>
+          <!-- /.col-md-12 -->
+
+          <div class="col-md-12">
+            <div
+              class="wprt-project arrow-style-2 has-arrows arrow60 arrow-dark"
+              data-layout="slider"
+              data-column="3"
+              data-column2="3"
+              data-column3="2"
+              data-column4="1"
+              data-gaph="30"
+              data-gapv="30"
+            >
+              <div
+                id="projects"
+                class="cbp cbp-caption-active cbp-caption- cbp-ready cbp-mode-slider"
+              >
+                <div class="cbp-wrapper-outer">
+                  <div class="cbp-wrapper">
+                    <div class="cbp-item">
+                      <div class="cbp-item-wrapper">
+                        <div class="project-item">
+                          <div class="inner">
+                            <div class="grid">
+                              <figure class="effect-sadie">
+                                <img src="images/projects/2.jpg" alt="image" />
+                                <figcaption>
+                                  <div>
+                                    <h2>
+                                      <a
+                                        target="_blank"
+                                        href="page-project-detail.html"
+                                      >
+                                        LUXURY BUILDINGS
+                                      </a>
+                                    </h2>
+                                    <p>Construction</p>
+                                  </div>
+                                </figcaption>
+                              </figure>
+                            </div>
+
+                            <a
+                              class="project-zoom cbp-lightbox"
+                              href="assets/img/projects/1-full.jpg"
+                              data-title="LUXURY BUILDINGS"
+                            >
+                              <i class="fa fa-arrows-alt"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--/.cbp-item -->
+
+                    <div class="cbp-item">
+                      <div class="cbp-item-wrapper">
+                        <div class="project-item">
+                          <div class="inner">
+                            <figure class="effect-honey">
+                              <img src="images/projects/2.jpg" alt="image" />
+                              <figcaption>
+                                <div>
+                                  <h2>
+                                    <a
+                                      target="_blank"
+                                      href="page-project-detail-2.html"
+                                    >
+                                      LUXURY BUILDINGS
+                                    </a>
+                                  </h2>
+                                  <p>Construction</p>
+                                </div>
+                              </figcaption>
+                            </figure>
+
+                            <a
+                              class="project-zoom cbp-lightbox"
+                              href="images/projects/2-full.jpg"
+                              data-title="LUXURY BUILDINGS"
+                            >
+                              <i class="fa fa-arrows-alt"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="cbp-item">
+                      <div class="cbp-item-wrapper">
+                        <div class="project-item">
+                          <div class="inner">
+                            <figure class="effect-sadie">
+                              <img src="images/projects/3.jpg" alt="image" />
+                              <figcaption>
+                                <div>
+                                  <h2>
+                                    <a
+                                      target="_blank"
+                                      href="page-project-detail-3.html"
+                                    >
+                                      LUXURY BUILDINGS
+                                    </a>
+                                  </h2>
+                                  <p>Construction</p>
+                                </div>
+                              </figcaption>
+                            </figure>
+
+                            <a
+                              class="project-zoom cbp-lightbox"
+                              href="images/projects/3-full.jpg"
+                              data-title="LUXURY BUILDINGS"
+                            >
+                              <i class="fa fa-arrows-alt"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- <div class="cbp-item">
+                      <div class="cbp-item-wrapper">
+                        <div class="project-item">
+                          <div class="inner">
+                            <figure class="effect-zoe">
+                              <img src="images/projects/4.jpg" alt="image" />
+                              <figcaption>
+                                <div>
+                                  <h2>
+                                    <a
+                                      target="_blank"
+                                      href="page-project-detail-4.html"
+                                    >
+                                      LUXURY BUILDINGS
+                                    </a>
+                                  </h2>
+                                  <p>Construction</p>
+                                </div>
+                              </figcaption>
+                            </figure>
+
+                            <a
+                              class="project-zoom cbp-lightbox"
+                              href="images/projects/4-full.jpg"
+                              data-title="LUXURY BUILDINGS"
+                            >
+                              <i class="fa fa-arrows-alt"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                    <!--/.cbp-item -->
+
+                    <!-- <div class="cbp-item">
+                      <div class="cbp-item-wrapper">
+                        <div class="project-item">
+                          <div class="inner">
+                            <figure class="effect-oscar">
+                              <img src="images/projects/5.jpg" alt="image" />
+                              <figcaption>
+                                <div>
+                                  <h2>
+                                    <a
+                                      target="_blank"
+                                      href="page-project-detail.html"
+                                    >
+                                      LUXURY BUILDINGS
+                                    </a>
+                                  </h2>
+                                  <p>Construction</p>
+                                </div>
+                              </figcaption>
+                            </figure>
+
+                            <a
+                              class="project-zoom cbp-lightbox"
+                              href="assets/img/projects/5-full.jpg"
+                              data-title="LUXURY BUILDINGS"
+                            >
+                              <i class="fa fa-arrows-alt"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                    <!--/.cbp-item -->
+
+                    <!-- <div class="cbp-item">
+                      <div class="cbp-item-wrapper">
+                        <div class="project-item">
+                          <div class="inner">
+                            <figure class="effect-sadie">
+                              <img
+                                src="assets/img/projects/6.jpg"
+                                alt="image"
+                              />
+                              <figcaption>
+                                <div>
+                                  <h2>
+                                    <a
+                                      target="_blank"
+                                      href="page-project-detail-2.html"
+                                    >
+                                      LUXURY BUILDINGS
+                                    </a>
+                                  </h2>
+                                  <p>Construction</p>
+                                </div>
+                              </figcaption>
+                            </figure>
+
+                            <a
+                              class="project-zoom cbp-lightbox"
+                              href="assets/img/projects/6-full.jpg"
+                              data-title="LUXURY BUILDINGS"
+                            >
+                              <i class="fa fa-arrows-alt"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                    <!--/.cbp-item -->
+
+                    <!-- <div class="cbp-item">
+                      <div class="cbp-item-wrapper">
+                        <div class="project-item">
+                          <div class="inner">
+                            <figure class="effect-sadie">
+                              <img
+                                src="assets/img/projects/7.jpg"
+                                alt="image"
+                              />
+                              <figcaption>
+                                <div>
+                                  <h2>
+                                    <a
+                                      target="_blank"
+                                      href="page-project-detail-2.html"
+                                    >
+                                      LUXURY BUILDINGS
+                                    </a>
+                                  </h2>
+                                  <p>Construction</p>
+                                </div>
+                              </figcaption>
+                            </figure>
+
+                            <a
+                              class="project-zoom cbp-lightbox"
+                              href="assets/img/projects/7-full.jpg"
+                              data-title="LUXURY BUILDINGS"
+                            >
+                              <i class="fa fa-arrows-alt"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                    <!--/.cbp-item -->
+
+                    <!-- <div class="cbp-item">
+                      <div class="cbp-item-wrapper">
+                        <div class="project-item">
+                          <div class="inner">
+                            <figure class="effect-sadie">
+                              <img
+                                src="assets/img/projects/8.jpg"
+                                alt="image"
+                              />
+                              <figcaption>
+                                <div>
+                                  <h2>
+                                    <a
+                                      target="_blank"
+                                      href="page-project-detail-2.html"
+                                    >
+                                      LUXURY BUILDINGS
+                                    </a>
+                                  </h2>
+                                  <p>Construction</p>
+                                </div>
+                              </figcaption>
+                            </figure>
+
+                            <a
+                              class="project-zoom cbp-lightbox"
+                              href="assets/img/projects/8-full.jpg"
+                              data-title="LUXURY BUILDINGS"
+                            >
+                              <i class="fa fa-arrows-alt"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                    <!--/.cbp-item -->
+                  </div>
+                </div>
+                <div class="cbp-nav">
+                  <div class="cbp-nav-controls">
+                    <div
+                      class="cbp-nav-prev cbp-nav-stop"
+                      data-slider-action="prev"
+                    ></div>
+                    <div class="cbp-nav-next" data-slider-action="next"></div>
+                  </div>
+                  <div class="cbp-nav-pagination">
+                    <div
+                      class="cbp-nav-pagination-item cbp-nav-pagination-active"
+                      data-slider-action="jumpTo"
+                    ></div>
+                    <div
+                      class="cbp-nav-pagination-item"
+                      data-slider-action="jumpTo"
+                    ></div>
+                    <div
+                      class="cbp-nav-pagination-item"
+                      data-slider-action="jumpTo"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <!-- /#projects -->
+            </div>
+            <!--/.wprt-project -->
+          </div>
+          <!-- /.col-md-12 -->
+
+          <div class="col-md-12">
+            <div
+              class="wprt-spacer"
+              data-desktop="80"
+              data-mobi="60"
+              data-smobi="60"
+              style="height: 80px;"
+            ></div>
+          </div>
+          <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+
     <script src="js/main.js"></script>
     <script src="js/plugins/rev-slider.js"></script>
     <script src="js/bootstrap.min.js"></script>
