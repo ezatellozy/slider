@@ -1,73 +1,6 @@
 
+ 
 
-// $(document).ready(function()  {
-//     $('#rev-slider1').revolution({
-//         delay: 9000,
-//         navigationType: "bullet",
-   
-//       autoHeight:"off",
-//       fullScreenAlignForce:"off",
-    
-//     onHoverStop:"on",
-     
-//       thumbWidth:100,
-//   thumbHeight:50,
-//      thumbAmount:3,
-    
-//        hideThumbsOnMobile:"off",
-//      hideBulletsOnMobile:"off",
-//          hideArrowsOnMobile: "off",
-//         hideThumbsUnderResoluition:0,
-
-//  hideThumbs:0,
-// hideTimerBar:"off",
-
-//  keyboardNavigation:"on",
-
-//  navigationType:"bullet",
-//  navigationArrows:"solo",
-//  navigationStyle:"round",
-
-//  navigationHAlign:"center",
-//  navigationVAlign:"bottom",
-//  navigationHOffset:30,
-//  navigationVOffset:30,
-
-// soloArrowLeftHalign:"left",
-//  soloArrowLeftValign:"center",
-//  soloArrowLeftHOffset:20,
-//  soloArrowLeftVOffset:0,
-
-//  soloArrowRightHalign:"right",
-//  soloArrowRightValign:"center",
-//  soloArrowRightHOffset:20,
-//  soloArrowRightVOffset:0,
-
-
-//  touchenabled:"on",
-//  swipe_velocity:"0.7",
-//  swipe_max_touches:"1",
-//  swipe_min_touches:"1",
-//  drag_block_vertical:"false",
-
-//  stopAtSlide:-1,
-//  stopAfterLoops:-1,
-//  hideCaptionAtLimit:0,
-//  hideAllCaptionAtLilmit:0,
-//  hideSliderAtLimit:0,
-
-// dottedOverlay:"none",
-
-// fullWidth:"off",
-// forceFullWidth:"off",
-// fullScreen:"off",
-// fullScreenOffsetContainer:"#topheader-to-offset",
-
-//  shadow:0
-
-
-//     })
-// })
 ; (function ($) {
     'use strict'
     var wprtTheme = {
@@ -89,16 +22,43 @@
 
             // Run on document ready
             self.config.$document.on( 'ready', function() {
-
                 // Mobile Navigation
+                self.preLoader();
                 self.mobileNav();
+                self.spacer();
+                self.counter();
                 self.projectFilter();
+                self.serviceSlider();
+                self.testimonails();
 
 
-            } );
-
-            // Run on Window Load
+            });
   
+        },
+        preLoader: function() {
+            if ( $().animsition ) {
+                $(".animsition").animsition({
+                    inClass: 'fade-in',
+                    outClass: 'fade-out',
+                    inDuration: 1500,
+                    outDuration: 800,
+                    loading: true,
+                    loadingParentElement: 'body',
+                    loadingClass: 'animsition-loading',
+                    timeout: false,
+                    timeoutCountdown: 5000,
+                    onLoadEvent: true,
+                    browser: [
+                        '-webkit-animation-duration',
+                        '-moz-animation-duration',
+                        'animation-duration'
+                        ],
+                    overlay: false,
+                    overlayClass: 'animsition-overlay-slide',
+                    overlayParentElement: 'body',
+                    transition: function(url){ window.location.href = url; }
+                });
+            }
         },
         mobileNav: function () {
             var menuType = 'desktop';
@@ -159,8 +119,8 @@
                     gapV = Number($this.data("gapv"));
 
                     $(this).find('#projects').cubeportfolio({
+                        layoutMode: layout,
                     filters: '#project-filter',
-                    layoutMode: slider,
                     defaultFilter: '*',
                     animationType: 'quicksand',
                     gapHorizontal: gapH,
@@ -186,6 +146,124 @@
                         width: 320,
                         cols: item4
                     }],
+                    caption: '',
+                    displayType: 'bottomToTop',
+                    displayTypeSpeed: 100
+                });
+            });
+        },
+        spacer: function() {
+            $(window).on('load resize', function() {
+                $('.wprt-spacer').each(function(){
+                    if ( $(window).width() > 991 ) {
+                        $(this).attr('style', 'height:' + $(this).data('desktop') + 'px')
+                    } else if ( $(window).width() > 767 ) {
+                        $(this).attr('style', 'height:' + $(this).data('mobi') + 'px')
+                    } else {
+                        $(this).attr('style', 'height:' + $(this).data('smobi') + 'px') 
+                    }
+                })
+            });
+        },
+        serviceSlider: function() {
+            $('.wprt-service').each(function() {
+                var
+                $this = $(this),
+                item = $this.data("column"),
+                item2 = $this.data("column2"),
+                item3 = $this.data("column3"),
+                item4 = $this.data("column4"),
+                layout = $this.data("layout"),
+                gapH = Number($this.data("gaph")),
+                gapV = Number($this.data("gapv"));
+
+                $(this).find('#service-wrap').cubeportfolio({
+                    layoutMode: layout,
+                    defaultFilter: '*',
+                    animationType: 'quicksand',
+                    gapHorizontal: gapH,
+                    gapVertical: gapV,
+                    showNavigation: true,
+                    showPagination: true,
+                    gridAdjustment: 'responsive',
+                    rewindNav: false,
+                    auto: true,
+                    mediaQueries: [{
+                        width: 1500,
+                        cols: item
+                    }, {
+                        width: 1100,
+                        cols: item
+                    }, {
+                        width: 800,
+                        cols: item2
+                    }, {
+                        width: 550,
+                        cols: item3
+                    }, {
+                        width: 320,
+                        cols: item4
+                    }],
+                    caption: ' ',
+                    displayType: 'bottomToTop',
+                    displayTypeSpeed: 100
+                });
+            });
+        },
+        counter: function() {
+            if ($().countTo) {
+            
+                $('.wprt-counter').on('on-appear', function () {
+                    console.log("true")
+                    $(this).find('.number').each(function() {
+                        var to = parseInt( $(this).data('to'), 10 ),
+                            speed = parseInt( $(this).data('speed'), 10 );
+                            
+                        $(this).countTo({
+                            to: to,
+                            speen: speed
+                        });
+                    });
+                }); //counter
+            }
+        },
+        testimonails: function() {
+            $('.wprt-testimonials').each(function() {
+                var
+                $this = $(this),
+                item = $this.data("column"),
+                item2 = $this.data("column2"),
+                item3 = $this.data("column3"),
+                item4 = $this.data("column4"),
+                gapV = Number($this.data("gapv"));
+
+                $(this).find('#testimonials-wrap').cubeportfolio({
+                    layoutMode: 'slider',
+                    defaultFilter: '*',
+                    animationType: 'quicksand',
+                    gapHorizontal: 0,
+                    gapVertical: gapV,
+                    showNavigation: true,
+                    showPagination: true,
+                    gridAdjustment: 'responsive',
+                    rewindNav: false,
+                    auto: true,
+                    mediaQueries: [{
+                        width: 1500,
+                        cols: item
+                    }, {
+                        width: 1100,
+                        cols: item
+                    }, {
+                        width: 800,
+                        cols: item2
+                    }, {
+                        width: 550,
+                        cols: item3
+                    }, {
+                        width: 320,
+                        cols: item4
+                    }],
                     caption: ' ',
                     displayType: 'bottomToTop',
                     displayTypeSpeed: 100
@@ -195,3 +273,6 @@
     }
     wprtTheme.init();
 })(jQuery);
+
+
+

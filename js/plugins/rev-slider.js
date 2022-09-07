@@ -1,8 +1,5 @@
-// Revolution Slider
 var RevSlider = function() {
     "use strict";
-
-    // Revolution Slider 1
     var handleRevSliderLayout1 = function() {
         var tpj=jQuery,         
         revapi9;

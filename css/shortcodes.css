@@ -28,17 +28,17 @@
 }
 
 .wprt-section.facts {
-    background-image: url(../img/bg-section-2.jpg);
+    background-image: url(../images/bg-section-2.jpg);
     background-position: center center;
 }
 
 .wprt-section.promotion-2 {
-    background-image: url(../img/bg-section-3.jpg);
+    background-image: url(../images/bg-section-3.jpg);
     background-position: center center;
 }
 
 .wprt-section.progressbar {
-    background-image: url(../img/bg-section-4.jpg);
+    background-image: url(../images/bg-section-4.jpg);
     background-position: center center;
 }
 
@@ -49,12 +49,12 @@
 }
 
 .wprt-section.facts-2 {
-    background-image: url(../img/bg-section-5.jpg);
+    background-image: url(../images/bg-section-5.jpg);
     background-position: center center;
 }
 
 .wprt-section.facts-3 {
-    background-image: url(../img/bg-section-4.jpg);
+    background-image: url(../images/bg-section-4.jpg);
     background-position: center center;
 }
 
@@ -1536,7 +1536,7 @@
     bottom: -56px;
     width: 97px;
     height: 15px;
-    background: url(../img/5-stars.png) no-repeat center center;
+    background: url(../images/5-stars.png) no-repeat center center;
 }
 
 .wprt-testimonials.no-stars .customer:after {
