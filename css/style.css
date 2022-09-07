@@ -281,7 +281,7 @@ blockquote .small {
 	display: inline-block;
 }
 
-blockquote cite {}
+/* blockquote cite {} */
 
 blockquote em,
 blockquote i {
