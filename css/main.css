@@ -541,11 +541,11 @@ h2.title::after {
 
 /* End About Us */
 
-#service-wrap .cbp-item {
+/* #service-wrap .cbp-item {
     /* height: 100%; */
 }
 
-.service-item .thumb {
+*/ .service-item .thumb {
 
     height: 270px;
     overflow: hidden;
